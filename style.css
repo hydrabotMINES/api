@@ -142,6 +142,15 @@ header {
   border-radius: 5px;
 }
 
+.watermark a {
+  color: yellow;
+  text-decoration: none;
+}
+
+.watermark a:hover {
+  text-decoration: underline;
+}
+
 .instagram-logo {
   width: 20px;
   height: 20px;
