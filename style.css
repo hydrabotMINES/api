@@ -1,0 +1,208 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1a73e8;
+  color: white;
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+  background-color: #1a73e8;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: bold;
+  color: black;
+  text-shadow: 2px 2px 2px #888888, 4px 4px 4px #666666, 6px 6px 6px #444444;
+}
+
+.game-container {
+  background-color: #243b55;
+  padding: 10px; /* Reduced padding */
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  max-width: 500px; /* Further reduce max width */
+  margin: 0 auto; /* Center the game container */
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(5, 60px);
+  grid-template-rows: repeat(5, 60px);
+  gap: 5px; /* Reduced gap to save space */
+  margin: 20px auto;
+}
+
+.cell {
+  width: 60px;
+  height: 60px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.cell:hover {
+  transform: translateY(-5px);
+}
+
+.btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: opacity 0.3s;
+}
+
+.btn.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.timer {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.cell.star::before,
+.cell::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.cell.star::before {
+  background-image: url('./images/star.png');
+}
+
+.cell::before {
+  background-image: url('./images/casa.png');
+  border-radius: 10px;
+}
+
+.scanning-message {
+  font-size: 18px;
+  color: #ffeb3b;
+  margin-top: 20px;
+}
+
+.num-mines {
+  font-size: 18px;
+  color: #ffeb3b;
+  margin-top: 10px;
+}
+
+.watermark {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.instagram-logo {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  border-radius: 50%;
+}
+
+.highlight-message {
+  position: absolute;
+  width: 250px;
+  color: #b0b0b0; /* Grey color */
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Slight shadow for 3D effect */
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.highlight-message.left {
+  left: -280px; /* Adjusted to ensure it does not invade */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.highlight-message.right {
+  right: -280px; /* Adjusted to ensure it does not invade */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.alert-symbol {
+  color: yellow;
+  margin-right: 10px;
+}
+
+.iframe-container {
+  width: 60%; /* Reduce the width to make it more centered */
+  height: 600px; /* Increase the height for more scrolling */
+  margin: 0 auto; /* Center the iframe container */
+  margin-bottom: 40px; /* Add space at the bottom */
+  display: flex;
+  flex-direction: column; /* Use column direction to stack alert message and iframe */
+  align-items: center; /* Center the iframe container vertically */
+}
+
+.alert-message {
+  background-color: yellow;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+}
