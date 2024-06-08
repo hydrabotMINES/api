@@ -160,6 +160,7 @@ header {
 
 .highlight-message {
   width: 100%;
+  max-width: 460px; /* Set a maximum width */
   color: #b0b0b0; /* Grey color */
   font-size: 16px;
   font-weight: bold;
@@ -168,7 +169,7 @@ header {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 5px 10px;
   border-radius: 5px;
-  margin: 10px 0;
+  margin: 10px auto; /* Center horizontally */
 }
 
 .alert-symbol {
@@ -207,6 +208,7 @@ header {
 
   .highlight-message {
     font-size: 14px;
+    max-width: 95%; /* Adjust max-width for smaller screens */
   }
 
   .iframe-container {
