@@ -38,45 +38,21 @@ header {
 
 .game-container {
   background-color: #243b55;
-  padding: 10px;
+  padding: 10px; /* Reduced padding */
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.highlight-messages {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  padding: 10px;
-}
-
-.highlight-message {
-  width: 48%;
-  color: #b0b0b0;
-  font-size: 16px;
-  font-weight: bold;
-  text-align: left;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
-.alert-symbol {
-  color: yellow;
-  margin-right: 10px;
+  max-width: 500px; /* Further reduce max width */
+  margin: 0 auto; /* Center the game container */
 }
 
 .board {
   display: grid;
   grid-template-columns: repeat(5, 60px);
   grid-template-rows: repeat(5, 60px);
-  gap: 5px;
+  gap: 5px; /* Reduced gap to save space */
   margin: 20px auto;
 }
 
@@ -173,25 +149,32 @@ header {
   border-radius: 50%;
 }
 
-.iframe-container {
-  width: 60%;
-  height: 600px;
-  margin: 0 auto;
-  margin-bottom: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.highlight-message {
+  width: 100%;
+  color: #b0b0b0; /* Grey color */
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Slight shadow for 3D effect */
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 10px 0;
 }
 
-.alert-message {
-  background-color: yellow;
-  color: black;
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-  padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 10px;
+.alert-symbol {
+  color: yellow;
+  margin-right: 10px;
+}
+
+.iframe-container {
+  width: 80%; /* Increase width to 80% */
+  height: 80vh; /* Increase height to 80% of viewport height */
+  margin: 0 auto; /* Center the iframe container */
+  margin-bottom: 40px; /* Add space at the bottom */
+  display: flex;
+  flex-direction: column; /* Use column direction to stack alert message and iframe */
+  align-items: center; /* Center the iframe container vertically */
 }
 
 .iframe {
@@ -201,16 +184,11 @@ header {
   border-radius: 10px;
 }
 
-/* Media queries for responsive design */
-@media (max-width: 768px) {
-  .title {
-    font-size: 36px;
-  }
-
+/* Responsive adjustments */
+@media (max-width: 600px) {
   .board {
     grid-template-columns: repeat(5, 40px);
     grid-template-rows: repeat(5, 40px);
-    gap: 3px;
   }
 
   .cell {
@@ -218,52 +196,12 @@ header {
     height: 40px;
   }
 
-  .highlight-messages {
-    flex-direction: column;
-    align-items: center;
-  }
-
   .highlight-message {
-    width: 100%;
-    margin-bottom: 10px;
     font-size: 14px;
   }
 
   .iframe-container {
-    width: 100%;
-    height: 400px;
-  }
-}
-
-@media (max-width: 480px) {
-  .title {
-    font-size: 24px;
-  }
-
-  .board {
-    grid-template-columns: repeat(5, 30px);
-    grid-template-rows: repeat(5, 30px);
-    gap: 2px;
-  }
-
-  .cell {
-    width: 30px;
-    height: 30px;
-  }
-
-  .highlight-messages {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .highlight-message {
-    width: 100%;
-    margin-bottom: 10px;
-    font-size: 12px;
-  }
-
-  .iframe-container {
-    width: 100%;
-    height: 300px;
+    width: 100%; /* Full width on small screens */
+    height: 70vh; /* 70% of viewport height */
   }
 }
