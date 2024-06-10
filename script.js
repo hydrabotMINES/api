@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const scanningMessage = document.getElementById('scanningMessage');
   const numMinesElement = document.getElementById('numMines');
   const boardSize = 5;
-  const delayTime = 10; // delay time in seconds
+  const delayTime = 20; // delay time in seconds (updated to 60 seconds)
   let timer;
   let isFirstSignal = true;
 
@@ -56,16 +56,17 @@ document.addEventListener('DOMContentLoaded', () => {
   function startTimer() {
     let timeLeft = delayTime;
     timerElement.style.display = 'block';
-    timerElement.innerText = timeLeft;
+    timerElement.innerText = `Padrão válido por ${timeLeft} segundos`;
     generateSignalButton.disabled = true;
     generateSignalButton.classList.add('disabled');
     timer = setInterval(() => {
       timeLeft--;
-      timerElement.innerText = timeLeft;
+      timerElement.innerText = `Padrão válido por ${timeLeft} segundos`;
       if (timeLeft <= 0) {
         clearInterval(timer);
         generateSignalButton.disabled = false;
         generateSignalButton.classList.remove('disabled');
+        timerElement.style.display = 'none';
       }
     }, 1000);
   }
