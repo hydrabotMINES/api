@@ -168,7 +168,7 @@ header {
   align-items: center;
   font-size: 14px;
   color: white;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5); /* Increased transparency */
   padding: 5px 10px;
   border-radius: 5px;
 }
@@ -259,6 +259,23 @@ header {
     width: 100%;
     height: 800px; /* Adjusted for mobile view */
   }
+
+  .watermarks {
+    bottom: 5px; /* Adjust position */
+    right: 5px;
+    gap: 3px;
+  }
+
+  .watermark {
+    font-size: 12px; /* Smaller font size */
+    padding: 3px 7px; /* Reduced padding */
+    background-color: rgba(0, 0, 0, 0.4); /* More transparency */
+  }
+
+  .instagram-logo, .whatsapp-logo, .telegram-logo {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -291,5 +308,22 @@ header {
   .iframe-container {
     width: 100%;
     height: 600px; /* Adjusted for mobile view */
+  }
+
+  .watermarks {
+    bottom: 5px; /* Adjust position */
+    right: 5px;
+    gap: 2px;
+  }
+
+  .watermark {
+    font-size: 10px; /* Even smaller font size */
+    padding: 2px 5px; /* Reduced padding */
+    background-color: rgba(0, 0, 0, 0.3); /* More transparency */
+  }
+
+  .instagram-logo, .whatsapp-logo, .telegram-logo {
+    width: 15px;
+    height: 15px;
   }
 }
