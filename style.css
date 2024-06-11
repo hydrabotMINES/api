@@ -99,15 +99,27 @@ header {
 }
 
 .btn {
-  background-color: #f44336;
+  background: linear-gradient(145deg, #ff4d4d, #d32f2f);
   color: white;
   border: none;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-top: 20px;
-  transition: opacity 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5), 0 5px 10px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  background: linear-gradient(145deg, #d32f2f, #ff4d4d);
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.5), 0 2px 5px rgba(0, 0, 0, 0.3);
+  transform: translateY(4px);
+}
+
+.btn:hover {
+  box-shadow: 0 7px 15px rgba(255, 255, 255, 0.5), 0 7px 15px rgba(0, 0, 0, 0.3);
 }
 
 .btn.disabled {
@@ -142,15 +154,27 @@ header {
 }
 
 .scanning-message {
-  font-size: 18px;
+  font-size: 19px;
   color: #ffeb3b;
-  margin-top: 20px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 
+    1px 1px 0 #000, 
+    2px 2px 0 #000, 
+    3px 3px 0 #000, 
+    4px 4px 0 #000, 
+    5px 5px 0 #000;
 }
 
 .num-mines {
   font-size: 18px;
-  color: #ffeb3b;
   margin-top: 10px;
+  color: #ffeb3b;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.3), 3px 3px 6px rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  display: inline-block;
 }
 
 .watermarks {
@@ -263,18 +287,18 @@ header {
   .watermarks {
     bottom: 5px; /* Adjust position */
     right: 5px;
-    gap: 3px;
+    gap: 2px;
   }
 
   .watermark {
-    font-size: 12px; /* Smaller font size */
-    padding: 3px 7px; /* Reduced padding */
+    font-size: 10px; /* Smaller font size */
+    padding: 2px 5px; /* Reduced padding */
     background-color: rgba(0, 0, 0, 0.4); /* More transparency */
   }
 
   .instagram-logo, .whatsapp-logo, .telegram-logo {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
   }
 }
 
@@ -317,13 +341,13 @@ header {
   }
 
   .watermark {
-    font-size: 10px; /* Even smaller font size */
-    padding: 2px 5px; /* Reduced padding */
+    font-size: 5px; /* Even smaller font size */
+    padding: 1px 3px; /* Reduced padding */
     background-color: rgba(0, 0, 0, 0.3); /* More transparency */
   }
 
   .instagram-logo, .whatsapp-logo, .telegram-logo {
-    width: 15px;
-    height: 15px;
+    width: 7px;
+    height: 7px;
   }
 }
