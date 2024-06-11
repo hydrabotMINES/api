@@ -212,20 +212,21 @@ header {
 .watermarks {
   position: fixed;
   bottom: 10px;
-  right: 10px;
+  left: 10px; /* Move the watermarks to the left */
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   gap: 5px;
+  opacity: 0.7; /* Increase transparency */
 }
 
 .watermark {
   display: flex;
   align-items: center;
-  font-size: 14px;
+  font-size: 12px; /* Reduce font size */
   color: white;
-  background-color: rgba(0, 0, 0, 0.5); /* Increased transparency */
-  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 3px 8px; /* Reduce padding */
   border-radius: 5px;
 }
 
@@ -242,8 +243,8 @@ header {
   width: 20px; /* Reduce icon size */
   height: 20px;
   margin: 0 5px;
-  border-radius: 50%;}
-
+  border-radius: 50%;
+}
 /* Highlight watermark for hydra bot developer */
 .watermark.highlight {
   font-size: 14px;
@@ -255,7 +256,7 @@ header {
 
 .iframe-container {
   width: 100%;
-  height: 800px; /* Ajuste a altura conforme necessário */
+  height: 1000px; /* Adjust the height as needed */
   margin: 0 auto;
   margin-bottom: 40px;
   display: flex;
