@@ -6,6 +6,10 @@ html, body {
   color: white;
   overflow-y: auto; /* Enable vertical scrolling */
 }
+@media (max-width: 768px) {
+  body {
+    padding-top: 20px; /* Adjust this value as needed */
+  }}
 
 .container {
   text-align: center;
