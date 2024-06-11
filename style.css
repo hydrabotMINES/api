@@ -267,14 +267,14 @@ header {
   }
 
   .watermark {
-    font-size: 7px; /* Smaller font size */
-    padding: 2px 5px; /* Reduced padding */
+    font-size: 12px; /* Smaller font size */
+    padding: 3px 7px; /* Reduced padding */
     background-color: rgba(0, 0, 0, 0.4); /* More transparency */
   }
 
   .instagram-logo, .whatsapp-logo, .telegram-logo {
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -317,13 +317,13 @@ header {
   }
 
   .watermark {
-    font-size: 5px; /* Even smaller font size */
-    padding: 1px 3px; /* Reduced padding */
+    font-size: 10px; /* Even smaller font size */
+    padding: 2px 5px; /* Reduced padding */
     background-color: rgba(0, 0, 0, 0.3); /* More transparency */
   }
 
   .instagram-logo, .whatsapp-logo, .telegram-logo {
-    width: 7px;
-    height: 7px;
+    width: 15px;
+    height: 15px;
   }
 }
